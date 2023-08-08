@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-30 04:15:19 PM"/>
+        <attribute name="created" value="TGVub3ZvO0xBUFRPUC1PNTNON09ISzsyMDIyLTEyLTMwOzAyOjMzOjU0IFBNOzI5NTE="/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1PNTNON09ISzsyMDIyLTEyLTMwOzA0OjE1OjE5IFBNOzE7MzA2Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harga, persentaseDiskon, total" type="Integer" array="False" size=""/>
+            <assign variable="harga" expression="input(&quot;harga barang&quot;)"/>
+            <assign variable="persentaseDiskon" expression="input(&quot;persentase diskon&quot;)"/>
+            <assign variable="total" expression="hitungTotalPembayaran(harga, persentaseDiskon)"/>
+            <output expression="&quot;Total = &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+    <function name="hitungTotalPembayaran" type="Integer" variable="total">
+        <parameters>
+            <parameter name="harga" type="Integer" array="False"/>
+            <parameter name="persentaseDiskon" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="harga - persentaseDiskon * harga / 100"/>
+        </body>
+    </function>
+    <function name="input" type="Integer" variable="hasilInput">
+        <parameters>
+            <parameter name="namaInput" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasilInput" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan &quot; &amp; namaInput &amp; &quot;:&quot;" newline="True"/>
+            <input variable="hasilInput"/>
+        </body>
+    </function>
+    <function name="sayHello" type="None" variable="">
+        <parameters>
+            <parameter name="nama" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Hello &quot; &amp; nama" newline="True"/>
+        </body>
+    </function>
+    <function name="sum" type="Integer" variable="c">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="a + b"/>
+        </body>
+    </function>
+</flowgorithm>

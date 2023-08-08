@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-17 03:03:04 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMTc7MDE6NTM6NTQgUE07MjU1NA=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMTc7MDM6MDM6MDQgUE07NTsyNjU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nomorBulan" type="Integer" array="False" size=""/>
+            <input variable="nomorBulan"/>
+            <output expression="&quot;Bulan ke- &quot; &amp; nomorBulan &amp; &quot; = &quot; &amp; getNamaBulan(nomorBulan)" newline="True"/>
+        </body>
+    </function>
+    <function name="getNamaBulan" type="String" variable="nama">
+        <parameters>
+            <parameter name="nomorBulan" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <declare name="namaBulan" type="String" array="True" size="13"/>
+            <assign variable="namaBulan[1]" expression="&quot;januari&quot;"/>
+            <assign variable="namaBulan[2]" expression="&quot;februari&quot;"/>
+            <assign variable="namaBulan[3]" expression="&quot;maret&quot;"/>
+            <assign variable="namaBulan[4]" expression="&quot;april&quot;"/>
+            <assign variable="namaBulan[5]" expression="&quot;mei&quot;"/>
+            <assign variable="namaBulan[6]" expression="&quot;juni&quot;"/>
+            <assign variable="namaBulan[7]" expression="&quot;juli&quot;"/>
+            <assign variable="namaBulan[8]" expression="&quot;agustus&quot;"/>
+            <assign variable="namaBulan[9]" expression="&quot;september&quot;"/>
+            <assign variable="namaBulan[10]" expression="&quot;okotber&quot;"/>
+            <assign variable="namaBulan[11]" expression="&quot;november&quot;"/>
+            <assign variable="namaBulan[12]" expression="&quot;desember&quot;"/>
+            <if expression="1 &lt;= nomorBulan &amp;&amp; nomorBulan &lt;= 12">
+                <then>
+                    <assign variable="nama" expression="namaBulan[nomorBulan]"/>
+                </then>
+                <else>
+                    <assign variable="nama" expression="&quot;ERROR&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

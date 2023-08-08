@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 05:03:29 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDQ6NTU6MDIgUE07MjU1MQ=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDU6MDM6MjkgUE07MTsyNjYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <declare name="jamKerja, gajiPerJam" type="Integer" array="False" size=""/>
+            <declare name="gaji" type="Integer" array="False" size=""/>
+            <output expression="&quot;halo siapa namamu?&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;hai &quot; &amp; nama &amp; &quot; berapa jam kamu kerja?&quot;" newline="True"/>
+            <input variable="jamKerja"/>
+            <output expression="&quot;per jam kamu di bayar berapa?&quot;" newline="True"/>
+            <input variable="gajiPerJam"/>
+            <assign variable="gaji" expression="gajiPerJam*jamKerja"/>
+            <output expression="&quot;jadi kamu mendapatkan gaji sebesar Rp &quot; &amp; gajiPerJam*jamKerja" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

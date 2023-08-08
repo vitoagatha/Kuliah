@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-13 08:58:15 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMTM7MDg6MzQ6MDYgUE07MjU1Mw=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMTM7MDg6NTg6MTUgUE07MTsyNjY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <declare name="usia" type="Integer" array="False" size=""/>
+            <call expression="halo"/>
+            <output expression="&quot;siapa namamu?&quot;" newline="True"/>
+            <input variable="nama"/>
+            <call expression="sapa (nama)"/>
+            <output expression="&quot;berapa usiamu?&quot;" newline="True"/>
+            <input variable="usia"/>
+            <call expression="usia (usia)"/>
+        </body>
+    </function>
+    <function name="halo" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;halo selamat datang&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="sapa" type="None" variable="">
+        <parameters>
+            <parameter name="nama" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;hai &quot; &amp; nama &amp; &quot; senang bertemu denganmu&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="usia" type="None" variable="">
+        <parameters>
+            <parameter name="usia" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;oh &quot; &amp; usia &amp; &quot; kamu masih muda ya!&quot;" newline="True"/>
+            <assign variable="usia" expression="usia+5"/>
+            <output expression="&quot;bayangkan 5 tahun lagi kamu berusia &quot; &amp; usia+5" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

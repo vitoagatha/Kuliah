@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 09:31:06 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDk6MDA6MjQgUE07MjU1MA=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDk6MzE6MDYgUE07ODsyNjY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, angka, jumlah, total" type="Integer" array="False" size=""/>
+            <declare name="rata2" type="Real" array="False" size=""/>
+            <assign variable="jumlah" expression="0"/>
+            <assign variable="total" expression="0"/>
+            <for variable="a" start="1" end="5" direction="inc" step="1">
+                <output expression="&quot;masukkan angka &quot;&amp;a" newline="True"/>
+                <input variable="angka"/>
+                <assign variable="jumlah" expression="jumlah + 1"/>
+                <assign variable="total" expression="jumlah + total"/>
+            </for>
+            <output expression="&quot;jumalah angka = &quot;&amp;jumlah" newline="True"/>
+            <output expression="&quot;total angka = &quot;&amp;total" newline="True"/>
+            <assign variable="rata2" expression="jumlah / total"/>
+            <output expression="&quot;rata rata angka = &quot;&amp;rata2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

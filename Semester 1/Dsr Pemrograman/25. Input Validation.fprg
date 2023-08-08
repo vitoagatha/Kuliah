@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="arasy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-21 08:01:11 PM"/>
+        <attribute name="created" value="YXJhc3k7QVJJRi1QQzsyMDIzLTAxLTEwOzEwOjAyOjQ0IEFNOzIyNzU="/>
+        <attribute name="edited" value="YXJhc3k7QVJJRi1QQzsyMDIzLTAxLTEwOzEyOjIzOjI3IFBNOzE7MjQwNA=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMjE7MDg6MDE6MTEgUE07MjsyNjUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harga, persentaseDiskon, total" type="Integer" array="False" size=""/>
+            <do expression="konfirmasiLanjut()">
+                <assign variable="harga" expression="inputHarga()"/>
+                <assign variable="persentaseDiskon" expression="inputPersentaseDiskon()"/>
+                <assign variable="total" expression="harga - (persentaseDiskon * harga / 100)"/>
+                <output expression="&quot;Total yang harus dibayar = &quot; &amp; total" newline="True"/>
+            </do>
+        </body>
+    </function>
+    <function name="inputHarga" type="Integer" variable="harga">
+        <parameters/>
+        <body>
+            <declare name="harga" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan harga barang:&quot;" newline="True"/>
+            <input variable="harga"/>
+            <while expression="harga &lt;= 0">
+                <output expression="&quot;Harga harus positif&quot;" newline="True"/>
+                <output expression="&quot;Masukkan harga barang:&quot;" newline="True"/>
+                <input variable="harga"/>
+            </while>
+        </body>
+    </function>
+    <function name="inputPersentaseDiskon" type="Integer" variable="persentaseDiskon">
+        <parameters/>
+        <body>
+            <declare name="persentaseDiskon" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan persentase diskon:&quot;" newline="True"/>
+            <input variable="persentaseDiskon"/>
+            <while expression="!(persentaseDiskon &gt;= 0 AND&#13;&#10;persentaseDiskon &lt;= 100)">
+                <output expression="&quot;Persentase diskon harus antara 0 s.d. 100&quot;" newline="True"/>
+                <output expression="&quot;Masukkan persentase diskon:&quot;" newline="True"/>
+                <input variable="persentaseDiskon"/>
+            </while>
+        </body>
+    </function>
+    <function name="konfirmasiLanjut" type="Boolean" variable="lanjut">
+        <parameters/>
+        <body>
+            <declare name="lanjut" type="Boolean" array="False" size=""/>
+            <declare name="konfirmasi" type="String" array="False" size=""/>
+            <output expression="&quot;Lanjut (Y/T)?&quot;" newline="True"/>
+            <input variable="konfirmasi"/>
+            <while expression="!(konfirmasi == &quot;Y&quot; OR konfirmasi == &quot;y&quot; OR&#13;&#10;konfirmasi == &quot;T&quot; OR konfirmasi == &quot;t&quot;)">
+                <output expression="&quot;Masukkan Y untuk lanjut atau T untuk keluar.&quot;" newline="True"/>
+                <output expression="&quot;Lanjut (Y/T)?&quot;" newline="True"/>
+                <input variable="konfirmasi"/>
+            </while>
+            <assign variable="lanjut" expression="(konfirmasi == &quot;Y&quot; OR&#13;&#10;konfirmasi == &quot;y&quot;)"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 09:47:56 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDk6MzE6MTAgUE07MjU0OQ=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDk6NDc6NTYgUE07MzsyNjc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kolom, baris, jumlah" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa jumlah bintang yang di inginkan?&quot;" newline="True"/>
+            <input variable="jumlah"/>
+            <for variable="baris" start="1" end="jumlah" direction="inc" step="1">
+                <for variable="kolom" start="baris" end="jumlah" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-12 08:14:59 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMTI7MDc6NDE6MzQgUE07MjU1MQ=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMTI7MDg6MTQ6NTkgUE07MTsyNjY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="input, angka, loop, hasilBagi, counter" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa banyak bilangan prima?&quot;" newline="True"/>
+            <input variable="input"/>
+            <assign variable="angka" expression="1"/>
+            <while expression="input &gt; 0">
+                <assign variable="counter" expression="0"/>
+                <for variable="loop" start="1" end="angka" direction="inc" step="1">
+                    <assign variable="hasilBagi" expression="angka % loop"/>
+                    <if expression="hasilBagi == 0">
+                        <then>
+                            <assign variable="counter" expression="counter + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="counter == 2">
+                    <then>
+                        <output expression="angka" newline="True"/>
+                        <assign variable="input" expression="input - 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="angka" expression="angka + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

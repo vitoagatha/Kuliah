@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-12 08:46:25 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMTI7MDg6NDE6MDMgUE07MjU0OA=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMTI7MDg6NDY6MjUgUE07MTsyNjY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="angka, loop, total" type="Integer" array="False" size=""/>
+            <assign variable="angka" expression="2"/>
+            <for variable="loop" start="0" end="9" direction="inc" step="1">
+                <assign variable="total" expression="angka ^ loop"/>
+            </for>
+            <output expression="&quot;suku ke-10 dari deret aritmatika adalah&quot;" newline="True"/>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

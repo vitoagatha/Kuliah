@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 08:34:01 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMTg7MDg6MDI6NDIgUE07MjU1Mw=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMTg7MDg6MzQ6MDEgUE07MTsyNjYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TebakNomor" type="Integer" array="False" size=""/>
+            <declare name="TebakanPengguna" type="Integer" array="False" size=""/>
+            <declare name="NomorRandom" type="Integer" array="False" size=""/>
+            <declare name="MAX" type="Integer" array="False" size=""/>
+            <assign variable="MAX" expression="100"/>
+            <assign variable="TebakNomor" expression="Random(10)"/>
+            <output expression="&quot;Masukkan angka antara 0 dan &quot;&amp; MAX -1" newline="True"/>
+            <input variable="TebakanPengguna"/>
+            <while expression="TebakanPengguna &lt;&gt; TebakNomor">
+                <if expression="TebakanPengguna &lt; TebakNomor">
+                    <then>
+                        <output expression="&quot;Nomor Terendah&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="TebakanPengguna &gt; TebakNomor">
+                            <then>
+                                <output expression="&quot;Nomor Tertinggi&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Masukkan angka antara 0 sampai 9&quot;" newline="True"/>
+                <input variable="TebakanPengguna"/>
+            </while>
+            <output expression="&quot;Anda benar. Terimakasih telah bermain.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

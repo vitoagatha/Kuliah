@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="arasy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-20 12:22:23 PM"/>
+        <attribute name="created" value="YXJhc3k7QVJJRi1QQzsyMDIyLTEyLTIwOzEyOjAwOjEwIFBNOzIyODU="/>
+        <attribute name="edited" value="YXJhc3k7QVJJRi1QQzsyMDIyLTEyLTIwOzEyOjAwOjM2IFBNOzE7YXJhc3k7QVJJRi1QQzsyMDIyLTEyLTIwOzExOjM4OjM5IEFNOzQ3NTE="/>
+        <attribute name="edited" value="YXJhc3k7QVJJRi1QQzsyMDIyLTEyLTIwOzEyOjIyOjIzIFBNOzE7MjQwMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n" type="Integer" array="False" size=""/>
+            <input variable="m"/>
+            <input variable="n"/>
+            <call expression="tampilkanDeret(m, n)"/>
+        </body>
+    </function>
+    <function name="tampilkanDeret" type="None" variable="">
+        <parameters>
+            <parameter name="m" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="m" newline="True"/>
+            <if expression="m &lt; n">
+                <then>
+                    <call expression="tampilkanDeret(m + 1, n)"/>
+                </then>
+                <else>
+                    <if expression="m &gt; n">
+                        <then>
+                            <call expression="tampilkanDeret(m - 1, n)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="arasy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-17 11:29:59 AM"/>
+        <attribute name="created" value="YXJhc3k7QVJJRi1QQzsyMDIzLTAxLTE3OzExOjIzOjQ1IEFNOzIyODc="/>
+        <attribute name="edited" value="YXJhc3k7QVJJRi1QQzsyMDIzLTAxLTE3OzExOjI5OjU5IEFNOzE7MjQwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan banyak mahasiswa di kelas:&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Masukkan banyak saudara siswa ke-&quot; &amp; i &amp; &quot;:&quot;" newline="True"/>
+                <input variable=""/>
+            </for>
+            <output expression="&quot;Banyak mahasiswa dengan 0 saudara = ... orang&quot;" newline="True"/>
+            <output expression="&quot;Banyak mahasiswa dengan 1 saudara = ... orang&quot;" newline="True"/>
+            <output expression="&quot;Banyak mahasiswa dengan 2 saudara = ... orang&quot;" newline="True"/>
+            <output expression="&quot;Banyak mahasiswa dengan 3 saudara = ... orang&quot;" newline="True"/>
+            <output expression="&quot;Banyak mahasiswa dengan 4 saudara = ... orang&quot;" newline="True"/>
+            <output expression="&quot;Banyak mahasiswa dengan 5 atau lebih saudara = ... orang&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

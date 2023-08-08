@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-03 03:46:28 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMDM7MDI6MTg6MjIgUE07MjU0Ng=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMDM7MDM6NDY6MjggUE07MzsyNjY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <output expression="&quot;banyak faktor dari &quot; &amp; n &amp; &quot; adalah &quot; &amp; getBanyakFaktor(n)" newline="True"/>
+            <if expression="isPrima(n)">
+                <then>
+                    <output expression="n &amp; &quot; adalah bilangan prima&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n &amp; &quot; bukan bilangan prima&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getBanyakFaktor" type="Integer" variable="getBanyakFaktor">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getBanyakFaktor, m" type="Integer" array="False" size=""/>
+            <assign variable="getBanyakFaktor" expression="0"/>
+            <for variable="m" start="1" end="n" direction="inc" step="1">
+                <if expression="n % m == 0">
+                    <then>
+                        <assign variable="getBanyakFaktor" expression="getBanyakFaktor + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="isPrirma" type="Boolean" variable="prima">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="prima" type="Boolean" array="False" size=""/>
+            <assign variable="prima" expression="getBanyakFaktor(n) == 2"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 04:53:54 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDQ6Mzg6MTUgUE07MjU1Ng=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDQ6NTM6NTQgUE07MTsyNjY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <declare name="usiaLimaTahunLagi" type="Integer" array="False" size=""/>
+            <declare name="usia" type="Integer" array="False" size=""/>
+            <output expression="&quot;halo, siapa namamu?&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;hai &quot; &amp; nama &amp; &quot; berapa usiamu?&quot;" newline="True"/>
+            <input variable="usia"/>
+            <output expression="usia &amp; &quot;? kamu msih muda ya!&quot;" newline="True"/>
+            <assign variable="usiaLimaTahunlagi" expression="usia+5"/>
+            <output expression="&quot;bayangkan, 5 tahun lagi, kamu baru berusia &quot; &amp; usia+5" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

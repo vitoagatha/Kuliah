@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-23 09:43:36 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMTQ7MTA6MzA6MjIgUE07MjU0MQ=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMjA7MTA6NTU6MzUgUE07MjthcmFzeTtBUklGLVBDOzIwMjMtMDEtMTA7MTA6MDI6NDQgQU07MjUuIElucHV0IFZhbGlkYXRpb24uZnByZzs3MzA0"/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMjM7MDk6NDM6MzYgUE07NTI7MjcyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tujuanUser" type="Integer" array="False" size=""/>
+            <declare name="hargaTiket" type="Integer" array="False" size=""/>
+            <declare name="jamBerangkatBus" type="Integer" array="False" size=""/>
+            <declare name="jamUser" type="Integer" array="False" size=""/>
+            <declare name="pilihanUser" type="Integer" array="False" size=""/>
+            <declare name="jumlahTiket" type="Integer" array="False" size=""/>
+            <declare name="namaUser" type="String" array="False" size=""/>
+            <declare name="namaPemesan" type="String" array="False" size=""/>
+            <declare name="nama" type="String" array="False" size=""/>
+            <declare name="lanjut" type="String" array="False" size=""/>
+            <do expression="lanjut == &quot;Y&quot; OR lanjut == &quot;y&quot;">
+                <output expression="&quot;Selamat datang di agen tiket bus antarkota, silahkan memilih tujuan yang akan anda tuju&quot;" newline="True"/>
+                <output expression="&quot;1.Jakarta-Solo (Rp 250.000) &quot; &amp; &quot;2.Jakarta-Malang (Ro 350.000) &quot; &amp; &quot;3.Jakarta-Surabaya (Rp 300.000)&quot;" newline="True"/>
+                <input variable="tujuanUser"/>
+                <output expression="&quot;Silahkan memilih waktu keberangkatan bus (1.Pagi, 2.Siang, 3.Malam)&quot;" newline="True"/>
+                <input variable="jamUser"/>
+                <output expression="&quot;Masukkan jumlah tiket yang ingin di beli&quot;" newline="True"/>
+                <input variable="jumlahTiket"/>
+                <output expression="&quot;Masukkan nama anda sebelum melanjutkan pembayaran tiket&quot;" newline="True"/>
+                <input variable="namaUser"/>
+                <declare name="harga, hargaAkhir" type="Integer" array="False" size=""/>
+                <declare name="totalTiket" type="Integer" array="False" size=""/>
+                <assign variable="harga" expression="hargaTiketBus(tujuanUser)"/>
+                <assign variable="totalTiket" expression="jumlah(jumlahTiket)"/>
+                <assign variable="hargaAkhir" expression="hargaTotal(harga, totaltiket)"/>
+                <output expression="&quot;Nama anda = &quot; &amp; namaPemesan(namaUser)" newline="True"/>
+                <output expression="&quot;Tujuan anda = &quot; &amp; TujuanBus(tujuanUser) &amp; &quot;, Harga tiket: Rp &quot; &amp; HargaTiketBus(tujuanUser)" newline="True"/>
+                <output expression="&quot;Jam keberangkatan = &quot; &amp; jam(jamUser)" newline="True"/>
+                <output expression="&quot;Jumlah tiket yang di pesan = &quot; &amp; jumlah(jumlahTiket) &amp; &quot; tiket&quot;" newline="True"/>
+                <output expression="&quot;Jadi total harga yang harus anda bayar adalah Rp &quot; &amp; hargaAkhir" newline="True"/>
+                <declare name="sisa, bayar" type="Integer" array="False" size=""/>
+                <declare name="bayarAkhir" type="Integer" array="False" size=""/>
+                <output expression="&quot;Apakah pesanan anda sudah benar ? silakan periksa kembali&quot;" newline="True"/>
+                <output expression="&quot;Y untuk lanjut ke pembayaran tiket, T untuk mengubah pesanan anda&quot;" newline="True"/>
+                <input variable="lanjut"/>
+                <while expression="!(lanjut == &quot;Y&quot; OR lanjut == &quot;y&quot;)">
+                    <output expression="&quot;1.Jakarta-Solo (Rp 250.000) &quot; &amp; &quot;2.Jakarta-Malang (Ro 350.000) &quot; &amp; &quot;3.Jakarta-Surabaya (Rp 300.000)&quot;" newline="True"/>
+                    <input variable="tujuanUser"/>
+                    <output expression="&quot;Silahkan memilih waktu keberangkatan bus (1.Pagi, 2.Siang, 3.Malam)&quot;" newline="True"/>
+                    <input variable="jamUser"/>
+                    <output expression="&quot;Masukkan jumlah tiket yang ingin di beli&quot;" newline="True"/>
+                    <input variable="jumlahTiket"/>
+                    <output expression="&quot;Masukkan nama anda sebelum melanjutkan pembayaran tiket&quot;" newline="True"/>
+                    <input variable="namaUser"/>
+                    <output expression="&quot;jadi total harga yang harus anda bayar adalah Rp &quot; &amp; hargaAkhir" newline="True"/>
+                    <output expression="&quot;Apakah pesanan anda sudah benar ? silakan periksa kembali&quot;" newline="True"/>
+                    <output expression="&quot;Y untuk lanjut ke pembayaran tiket, T untuk mengubah pesanan anda&quot;" newline="True"/>
+                    <input variable="lanjut"/>
+                </while>
+                <output expression="&quot;masukkan uang anda disini&quot;" newline="True"/>
+                <input variable="bayar"/>
+                <if expression="bayar &gt;= hargaAkhir">
+                    <then>
+                        <if expression="bayar &gt; hargaAkhir">
+                            <then>
+                                <assign variable="sisa" expression="bayar - hargaAkhir"/>
+                                <output expression="&quot;sisa kembalian uang anda Rp &quot; &amp; sisa" newline="True"/>
+                                <output expression="&quot;Terimah kasih, pesanan anda sudah selesai, semoga selamat sampai tujuan&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Terimah kasih, pesanan anda sudah selesai, semoga selamat sampai tujuan&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Uang anda tidak cukup, silahkan masukkan uang yang sesuai dengan pesanan anda&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Apa ada yang bisa kami bantu lagi?&quot;" newline="True"/>
+                <output expression="&quot;Y untuk kembali ke menu utama atau memesan tiket lagi, T untuk keluar dari proses pesanan&quot;" newline="True"/>
+                <input variable="lanjut"/>
+            </do>
+            <output expression="&quot;Terimah kasih, pesanan anda sudah selesai, semoga selamat sampai tujuan&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="HargaTiketBus" type="Integer" variable="tiket">
+        <parameters>
+            <parameter name="pilihan" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tiket" type="Integer" array="False" size=""/>
+            <declare name="hargaTiket" type="Integer" array="True" size="4"/>
+            <assign variable="hargaTiket[1]" expression="200000"/>
+            <assign variable="hargaTiket[2]" expression="350000"/>
+            <assign variable="hargaTiket[3]" expression="300000"/>
+            <assign variable="tiket" expression="hargaTiket[pilihan]"/>
+        </body>
+    </function>
+    <function name="hargaTotal" type="Integer" variable="hargaAkhir">
+        <parameters>
+            <parameter name="harga" type="Integer" array="False"/>
+            <parameter name="totalTiket" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hargaAkhir" type="Integer" array="False" size=""/>
+            <assign variable="hargaAkhir" expression="harga * totalTiket"/>
+        </body>
+    </function>
+    <function name="jam" type="String" variable="jamBerangkatBus">
+        <parameters>
+            <parameter name="jamUser" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="jamBerangkatBus" type="String" array="False" size=""/>
+            <declare name="jamBerangkat" type="String" array="True" size="4"/>
+            <assign variable="jamBerangkat[1]" expression="&quot;Pagi&quot;"/>
+            <assign variable="jamBerangkat[2]" expression="&quot;Siang&quot;"/>
+            <assign variable="jamBerangkat[3]" expression="&quot;Malam&quot;"/>
+            <assign variable="jamBerangkatBus" expression="jamBerangkat[jamUser]"/>
+        </body>
+    </function>
+    <function name="jumlah" type="Integer" variable="totalTiket">
+        <parameters>
+            <parameter name="jumlahTiket" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalTiket" type="Integer" array="False" size=""/>
+            <assign variable="totalTiket" expression="jumlahTiket"/>
+        </body>
+    </function>
+    <function name="namaPemesan" type="String" variable="nama">
+        <parameters>
+            <parameter name="namaUser" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <assign variable="nama" expression="namaUser"/>
+        </body>
+    </function>
+    <function name="TujuanBus" type="String" variable="tujuan">
+        <parameters>
+            <parameter name="tujuanUser" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tujuan" type="String" array="False" size=""/>
+            <declare name="tujuanBus" type="String" array="True" size="4"/>
+            <assign variable="tujuanBus[1]" expression="&quot;Jakarta-Solo&quot;"/>
+            <assign variable="tujuanBus[2]" expression="&quot;Jakarta-Malang&quot;"/>
+            <assign variable="tujuanBus[3]" expression="&quot;Jakarta-Surabaya&quot;"/>
+            <assign variable="tujuan" expression="tujuanBus[tujuanUser]"/>
+        </body>
+    </function>
+</flowgorithm>

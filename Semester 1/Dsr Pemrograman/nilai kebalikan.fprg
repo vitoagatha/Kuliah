@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-27 03:11:47 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMjc7MDI6NTE6MDkgUE07MjU1NQ=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMjc7MDM6MTE6NDcgUE07MTsyNjYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, sisa" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <do expression="n!=0">
+                <assign variable="sisa" expression="n % 10"/>
+                <assign variable="n" expression="n - sisa"/>
+                <assign variable="n" expression="n / 10"/>
+                <output expression="sisa" newline="False"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

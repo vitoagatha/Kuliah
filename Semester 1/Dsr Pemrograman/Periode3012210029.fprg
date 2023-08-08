@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="arasy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-22 01:52:07 PM"/>
+        <attribute name="created" value="YXJhc3k7QVJJRi1QQzsyMDIxLTExLTE3OzEwOjM2OjI4IFBNOzIzMDU="/>
+        <attribute name="edited" value="YXJhc3k7QVJJRi1QQzsyMDIyLTExLTIyOzAxOjAzOjQ0IFBNOzY7MjQwNw=="/>
+        <attribute name="edited" value="VU1VTTtERVNLVE9QLVY2NVA5NDg7MjAyMi0xMS0yMjswMTo1MjowNyBQTTsyOzI3MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Jangan membuat perubahan apapun pada module (fungsi) Main ini"/>
+            <declare name="periode" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan periode dalam menit:&quot;" newline="True"/>
+            <input variable="periode"/>
+            <call expression="formatPeriode(periode)"/>
+        </body>
+    </function>
+    <function name="formatPeriode" type="None" variable="">
+        <parameters>
+            <parameter name="inputMenit" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hari, jam, menit" type="Integer" array="False" size=""/>
+            <assign variable="hari" expression="(inputMenit / 1440)"/>
+            <assign variable="jam" expression="(inputMenit%1440)/60"/>
+            <assign variable="menit" expression="((inputMenit%1440)%60)"/>
+            <output expression="hari &amp; &quot; Hari, &quot; &amp; jam &amp; &quot; Jam, &quot; &amp; menit &amp; &quot; Menit&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

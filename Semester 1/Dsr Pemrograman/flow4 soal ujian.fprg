@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 08:13:43 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDc6NDY6MDMgUE07MjU1NQ=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDg6MTM6NDMgUE07MTsyNjYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jawaban" type="String" array="False" size=""/>
+            <declare name="nilai" type="Integer" array="False" size=""/>
+            <assign variable="nilai" expression="0"/>
+            <output expression="&quot;nama negara kita adalah?&quot;" newline="True"/>
+            <input variable="jawaban"/>
+            <if expression="jawaban = &quot;indonesia&quot;">
+                <then>
+                    <assign variable="nilai" expression="nilai + 20"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;ibukota negara kita adalah?&quot;" newline="True"/>
+            <input variable="jawaban"/>
+            <if expression="jawaban = &quot;jakarta&quot;">
+                <then>
+                    <assign variable="nilai" expression="nilai+20"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;provinsi kota gresik adalah?&quot;" newline="True"/>
+            <input variable="jawaban"/>
+            <if expression="jawaban = &quot;jawa timur&quot;">
+                <then>
+                    <assign variable="nilai" expression="nilai+20"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="nilai" newline="True"/>
+            <if expression="nilai &gt;= 60">
+                <then>
+                    <output expression="&quot;lulus&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;tidak lulus&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="UMUM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-06 02:47:38 PM"/>
+        <attribute name="created" value="VU1VTTtERVNLVE9QLVY2NVA5NDg7MjAyMi0xMi0wNjswMjowMjozMCBQTTsyNjEx"/>
+        <attribute name="edited" value="VU1VTTtERVNLVE9QLVY2NVA5NDg7MjAyMi0xMi0wNjswMjo0NzozOCBQTTsxOzI3MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="merah, kuning, biru, warna" type="String" array="False" size=""/>
+            <declare name="warna1, warna2" type="String" array="False" size=""/>
+            <output expression="&quot;masukkan warna primer yang kamu pilih&quot;" newline="True"/>
+            <input variable="warna1"/>
+            <if expression="warna1 == &quot;merah&quot;">
+                <then>
+                    <output expression="&quot;masukkan warna yang ingin kamu campurkan&quot;" newline="True"/>
+                    <input variable="warna2"/>
+                    <if expression="warna2 == &quot;biru&quot;">
+                        <then>
+                            <output expression="&quot;hasil warna yang kamu campurkan menjadi ungu&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="warna2 == &quot;kuning&quot;">
+                                <then>
+                                    <output expression="&quot;hasil warna yang kamu campurkan menjadi jingga&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="warna2 == &quot;merah&quot;">
+                                        <then>
+                                            <output expression="&quot;hasil warna yang kamu campurkan menjadi merah&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="warna1 == &quot;biru&quot;">
+                        <then>
+                            <output expression="&quot;masukkan warna yang ingin kamu campurkan&quot;" newline="True"/>
+                            <input variable="warna2"/>
+                            <if expression="warna2 == &quot;merah&quot;">
+                                <then>
+                                    <output expression="&quot;hasil warna yang kamu campurkan menjadi ungu&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="warna2 == &quot;kuning&quot;">
+                                        <then>
+                                            <output expression="&quot;hasil warna yang kamu campurkan menjadi hijau&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="warna2 == &quot;biru&quot;">
+                                                <then>
+                                                    <output expression="&quot;hasil warna yang kamu campurkan menjadi biru&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="warna1 == &quot;kuning&quot;">
+                                <then>
+                                    <output expression="&quot;masukkan warna yang ingin kamu campurkan&quot;" newline="True"/>
+                                    <input variable="warna2"/>
+                                    <if expression="warna2 == &quot;biru&quot;">
+                                        <then>
+                                            <output expression="&quot;jadi hasil warna yang kamu campurkan menjadi hijau&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="warna2 == &quot;kuning&quot;">
+                                                <then>
+                                                    <output expression="&quot;hasil warna yang kamu campurkan menjadi kuning&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="warna2 == &quot;merah&quot;">
+                                                        <then>
+                                                            <output expression="&quot;hasil warna yang kamu campurkan menjadi jingga&quot;" newline="True"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

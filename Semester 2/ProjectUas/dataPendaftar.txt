@@ -1,0 +1,12 @@
+1,vit,19 07 2004,gresik,vit2.com,smk gresik,teknik mesin,88.0
+2,v,v,v,v,v,teknik mesin,90.0
+3,b,b,b,b,b,teknik mesin,84.0
+4,f,f,f,f,f,teknik mesin,90.0
+5,c,c,c,c,c,teknik mesin,85.33333333333333
+6,x,x,x,x,x,teknik mesin,84.0
+7,t,t,t,t,t,teknik mesin,88.66666666666667
+8,m,m,m,m,m,teknik mesin,90.0
+9,z,z,z,z,z,teknik mesin,77.66666666666667
+10,d,d,d,d,d,teknik mesin,75.33333333333333
+11,a,a,a,a,a,teknik mesin,88.33333333333333
+12,b,,h,,,teknik SIPIL,86.0

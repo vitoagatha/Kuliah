@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="62822"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 05:13:18 PM"/>
+        <attribute name="created" value="NjI4MjI7TEFQVE9QLVZSNDhJMUNHOzIwMjMtMDEtMTQ7MDM6MjY6MjAgUE07MjU3NQ=="/>
+        <attribute name="edited" value="NjI4MjI7TEFQVE9QLVZSNDhJMUNHOzIwMjMtMDEtMTQ7MDQ6MDI6MzEgUE07MjsyNjgx"/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMTg7MDU6MTM6MTggUE07MjA7MjcxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kode, liter, bayar" type="Integer" array="False" size=""/>
+            <declare name="PlatKendaraan" type="String" array="False" size=""/>
+            <output expression="&quot;Selamat Datang di POM Bensin Shell Veteran&quot;" newline="True"/>
+            <output expression="&quot;Mau isi yang mana Kak 1. Shell Super 13030 2. Shell V-Power 13810&quot;" newline="True"/>
+            <input variable="kode"/>
+            <if expression="kode = 1">
+                <then>
+                    <output expression="&quot;Masukkan jumlah Super (liter)&quot;" newline="True"/>
+                    <input variable="liter"/>
+                    <output expression="&quot;Masukkan Plat Kendaraan&quot;" newline="True"/>
+                    <input variable="PlatKendaraan"/>
+                    <assign variable="bayar" expression="liter*gethargaBensin(kode)"/>
+                    <output expression="&quot;Anda:&quot;&amp;PlatKendaraan&amp;&quot;,Jumlah liter :&quot;&amp;liter&amp;&quot;. Jenis : &quot;&amp;kode&amp;&quot;, Harga/L : &quot;&amp;gethargaBensin(kode)&amp; &quot; &amp; &quot; &amp; &quot; Rp &quot;&amp;bayar&amp;&quot;.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Masukkan jumlah V-Power (liter)&quot;" newline="True"/>
+                    <input variable="liter"/>
+                    <output expression="&quot;Masukkan Plat Kendaraan&quot;" newline="True"/>
+                    <input variable="PlatKendaraan"/>
+                    <assign variable="bayar" expression="liter*gethargaBensin(kode)"/>
+                    <output expression="&quot;Anda:&quot;&amp;PlatKendaraan&amp;&quot;,Jumlah liter :&quot;&amp;liter&amp;&quot;. Jenis : &quot;&amp;kode&amp;&quot;, Harga/L : &quot;&amp;gethargaBensin(kode)&amp; &quot; &amp; &quot; &amp; &quot; Rp &quot;&amp;bayar&amp;&quot;.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Terima Kasih telah mengunjungi POM Shell Veteran, hati-hati dijalan&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="gethargaBensin" type="Real" variable="hargaBensin">
+        <parameters>
+            <parameter name="jenisBensin" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hargaBensin" type="Real" array="False" size=""/>
+            <if expression="jenisBensin = 1">
+                <then>
+                    <assign variable="hargaBensin" expression="13030"/>
+                </then>
+                <else>
+                    <assign variable="hargaBensin" expression="13810"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

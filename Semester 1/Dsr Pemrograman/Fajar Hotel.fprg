@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-21 09:36:30 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMjE7MDg6MDE6NTEgUE07MjU0Ng=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjMtMDEtMjE7MDk6MzY6MzAgUE07MzsyNjYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lamaMenginap" type="Integer" array="False" size=""/>
+            <declare name="tipeKamar" type="String" array="False" size=""/>
+            <declare name="jumlahKamar" type="Integer" array="False" size=""/>
+            <declare name="namaPemesan" type="String" array="False" size=""/>
+            <declare name="totalBiaya" type="Integer" array="False" size=""/>
+            <output expression="&quot;Selamat datang di Fajar Hotel, Ingin pesan untuk berapa hari?&quot;" newline="True"/>
+            <output expression="&quot;1. 1/2 hari&quot; &amp; &quot; 2. 1 hari&quot; &amp; &quot; 3. 2 hari&quot; &amp; &quot; 4. 3 hari&quot;" newline="True"/>
+            <input variable="lamaMenginap"/>
+            <output expression="&quot;Waktu penginapan yang anda tentukan adalah &quot; &amp; WaktuPenginapan(lamaMenginap) &amp; &quot;&quot;" newline="True"/>
+            <output expression="&quot;Untuk tipe kamarnya mau yang mana?&quot;" newline="True"/>
+            <output expression="&quot;1. Standard Room&quot; &amp; &quot; 2. Deluxe Room&quot; &amp; &quot; 3. Family Room&quot;" newline="True"/>
+            <input variable="tipeKamar"/>
+            <output expression="&quot;Untuk tipe kamar yang dipilih &quot; &amp; Tipe(tipeKamar) &amp; &quot;&quot;" newline="True"/>
+            <output expression="&quot;Pesan untuk berapa kamar?&quot;" newline="True"/>
+            <input variable="jumlahKamar"/>
+            <output expression="&quot;Untuk pemesanannya atas nama siapa?&quot;" newline="True"/>
+            <input variable="namaPemesan"/>
+        </body>
+    </function>
+    <function name="Tipe" type="String" variable="TipeKamarHotel">
+        <parameters>
+            <parameter name="tipeKamar" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="TipeKamarHotel" type="String" array="False" size=""/>
+            <declare name="TipeKamar" type="String" array="True" size="4"/>
+            <assign variable="TipeKamar[1]" expression="&quot;Standart Room&quot;"/>
+            <assign variable="TipeKamar[2]" expression="&quot;Deluxe Room&quot;"/>
+            <assign variable="TipeKamar[3]" expression="&quot;Family Room&quot;"/>
+            <assign variable="TipeKamarHotel" expression="TipeKamar[tipeKamar]"/>
+        </body>
+    </function>
+    <function name="WaktuPenginapan" type="String" variable="hari2">
+        <parameters>
+            <parameter name="lamaMenginap" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hari2" type="String" array="False" size=""/>
+            <declare name="hari" type="String" array="True" size="5"/>
+            <assign variable="hari[1]" expression="&quot;1/2 hari&quot;"/>
+            <assign variable="hari[2]" expression="&quot;1 hari&quot;"/>
+            <assign variable="hari[3]" expression="&quot;2 hari&quot;"/>
+            <assign variable="hari[4]" expression="&quot;3 hari&quot;"/>
+            <assign variable="hari2" expression="hari[lamaMenginap]"/>
+        </body>
+    </function>
+</flowgorithm>

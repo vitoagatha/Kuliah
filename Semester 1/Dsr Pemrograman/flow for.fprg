@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-12 08:33:27 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTEtMDc7MDg6Mjc6NDEgUE07MjU1Nw=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMTI7MDg6MzM6MjcgUE07MjsyNjY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="input, loop, angka1, angka2, total" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan nilai input agar menjadi nilai fibonacci&quot;" newline="True"/>
+            <input variable="input"/>
+            <assign variable="angka1" expression="1"/>
+            <assign variable="angka2" expression="0"/>
+            <for variable="loop" start="0" end="input - 1" direction="inc" step="1">
+                <assign variable="total" expression="angka1 + angka2"/>
+                <assign variable="angka1" expression="angka2"/>
+                <assign variable="angka2" expression="total"/>
+                <output expression="total" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="arasy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-12 08:51:40 PM"/>
+        <attribute name="created" value="YXJhc3k7QVJJRi1QQzsyMDIwLTEyLTAxOzEyOjU4OjIyIFBNOzIyOTg="/>
+        <attribute name="edited" value="YXJhc3k7QVJJRi1QQzsyMDIyLTExLTE0OzA0OjAzOjE1IFBNOzM7MjQwNg=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1PVUhPSkZKOzIwMjItMTEtMjk7MDI6MTE6NTggUE07MzsyNjU4"/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMTI7MDg6NTE6NDAgUE07MjsyNjU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harga" type="Real" array="False" size=""/>
+            <declare name="persentaseDiskon" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan harga barang setelah diskon&quot;" newline="True"/>
+            <input variable="harga"/>
+            <output expression="&quot;Masukkan persentase diskon:&quot;" newline="True"/>
+            <input variable="persentaseDiskon"/>
+            <call expression="hitungPembayaran(harga, persentaseDiskon)"/>
+        </body>
+    </function>
+    <function name="hitungPembayaran" type="None" variable="">
+        <parameters>
+            <parameter name="harga" type="Real" array="False"/>
+            <parameter name="presentaseDiskon" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="diskon, hargaAkhir" type="Real" array="False" size=""/>
+            <assign variable="diskon" expression="(harga * presentaseDiskon) / 100"/>
+            <assign variable="hargaAkhir" expression="harga + diskon"/>
+            <output expression="&quot;Harga barang sebelum diskon adalah :&quot; &amp; hargaAkhir" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

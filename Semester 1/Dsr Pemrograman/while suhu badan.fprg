@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-20 02:04:05 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMjA7MDE6NTA6MTQgUE07MjU0Mg=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMjA7MDI6MDQ6MDUgUE07MjsyNjUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suhu" type="Real" array="False" size=""/>
+            <output expression="&quot;masukan suhu badan anda sekarang&quot;" newline="True"/>
+            <input variable="suhu"/>
+            <while expression="suhu &gt; 37.5">
+                <for variable="suhu" start="1" end="1" direction="inc" step="1">
+                    <output expression="&quot;anda demam, silahkan beristirahat&quot;" newline="True"/>
+                </for>
+            </while>
+            <output expression="&quot;suhu badan anda normal&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

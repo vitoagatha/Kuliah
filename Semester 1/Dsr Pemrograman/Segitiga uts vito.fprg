@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-29 02:00:43 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1PVUhPSkZKOzIwMjItMTEtMjk7MDE6MTY6MDMgUE07MjU0Mg=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1PVUhPSkZKOzIwMjItMTEtMjk7MDI6MDA6NDMgUE07MzsyNjUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilaiA, nilaiB, nilaiC" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan nilai panjang a&quot;" newline="True"/>
+            <input variable="nilaiA"/>
+            <output expression="&quot;Masukkan nilai panjang b&quot;" newline="True"/>
+            <input variable="nilaiB"/>
+            <output expression="&quot;Masukkan nilai panjang c&quot;" newline="True"/>
+            <input variable="nilaiC"/>
+            <call expression="hitung(nilaiA, nilaiB, nilaiC)"/>
+        </body>
+    </function>
+    <function name="hitung" type="None" variable="">
+        <parameters>
+            <parameter name="nilaiA" type="Real" array="False"/>
+            <parameter name="nilaiB" type="Real" array="False"/>
+            <parameter name="nilaiC" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasilS" type="Real" array="False" size=""/>
+            <declare name="hasilAreaHalf, hasilAreaFinal" type="Real" array="False" size=""/>
+            <assign variable="hasilS" expression="(nilaiA + nilaiB + nilaiC) / 2"/>
+            <assign variable="hasilAreaHalf" expression="hasilS * (hasilS + nilaiA)*(hasilS + nilaiB)*(hasilS + nilaiC)"/>
+            <assign variable="hasilAreaFinal" expression="Sqrt(hasilAreaHalf)"/>
+            <output expression="&quot;Luas segitiga anda adalah &quot; &amp; hasilAreaFinal" newline="True"/>
+        </body>
+    </function>
+    <function name="hitungArea" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hasilS, hasilAreaHalf, hasilAreaFinal" type="Real" array="False" size=""/>
+            <assign variable="hasilAreaHalf" expression="hasilS * (hasilS + nilaiA)*(hasilS + nilaiB)*(hasilS + nilaiC)"/>
+            <assign variable="hasilAreaFinal" expression="Sqrt(hasilAreaHalf)"/>
+            <output expression="&quot;Luas segitiga anda adalah &quot; &amp; hasilAreaFinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

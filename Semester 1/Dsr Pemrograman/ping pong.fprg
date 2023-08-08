@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-27 02:15:08 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMjc7MDE6NDc6NDMgUE07MjU1Nw=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTItMjc7MDI6MTU6MDggUE07MTsyNjYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, m" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="m" expression="n"/>
+            <for variable="m" start="1" end="n" direction="inc" step="1">
+                <if expression="m % 3 == 0">
+                    <then>
+                        <if expression="m % 5 == 0">
+                            <then>
+                                <output expression="&quot;ping pong&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;ping&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="m % 5 == 0">
+                            <then>
+                                <output expression="&quot;pong&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="m" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

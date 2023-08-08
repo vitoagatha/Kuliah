@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 08:02:13 PM"/>
+        <attribute name="created" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTAtMjU7MDc6MjU6MDUgUE07MjU1Mw=="/>
+        <attribute name="edited" value="aHA7TEFQVE9QLTlJUEwyTzhQOzIwMjItMTAtMjU7MDg6MDI6MTMgUE07MTsyNjU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harga, pajak, total" type="Real" array="False" size=""/>
+            <output expression="&quot;halo, berapa harga pakaian yang kamu beli ?&quot;" newline="True"/>
+            <input variable="harga"/>
+            <assign variable="pajak" expression="0.1*harga"/>
+            <assign variable="total" expression="harga+pajak"/>
+            <output expression="&quot;pakaian dikenakan pajak 10% = &quot; &amp; pajak" newline="True"/>
+            <output expression="&quot;jadi total yang harus kamu bayar = Rp &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
