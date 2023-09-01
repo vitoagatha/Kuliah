@@ -9,14 +9,15 @@ public class PersonApp {
         System.out.println(person1.address);
         System.out.println(person1.country);
 
-        person1.sayHello("James"); // memanggil method
+        person1.sayHello("Wir", "Jakarta"); // memanggil method
 
         Person person2 = new Person("Joko");
+        System.out.println(person2.name);
 
         Person person3;
         person3 = new Person();
         person3.name = "Widodo";
-        person3.sayHello("Jawir");
+        person3.sayHello("Jawir", "Magelang");
 
     }
 }
