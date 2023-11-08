@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b61650a1-0ca6-4116-9265-f83893d6acc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Belajar Java/Latihan/Lat-P2-01/src/ProgramTanggal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Belajar Java/Latihan/Lat-P2-01/src/ProgramWaktu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/InsertionSort/InsertionSort.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/InsertionSort/InsertionSort/InsertionSort.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/InsertionSort/InsertionSort/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/InsertionSort/InsertionSort/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/InsertionSort/InsertionSort/app.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/SelectionSort/SelectionSort.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/SelectionSort/SelectionSort/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/SelectionSort/SelectionSort/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/SelectionSort/SelectionSort/SelectionSort.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Algoritma Struktur Data/SelectionSort/SelectionSort/app.config" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2WeqKWZoTX6A6JGLMgVuCUj8Std" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/hp/OneDrive/Documents/Kuliah/Semester 3/P2/Belajar"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b61650a1-0ca6-4116-9265-f83893d6acc4" name="Changes" comment="" />
+      <created>1697103329600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697103329600</updated>
+    </task>
+    <servers />
+  </component>
+</project>
